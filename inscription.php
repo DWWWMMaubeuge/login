@@ -1,13 +1,4 @@
 <?php
-<<<<<<< HEAD
-$__TEST = false;
-
-include ("L_fonctions_generales.php");
-
-login("inscription.php");
-
-saisie_formulaire();
-=======
 include ( 'L_fonctions_generales.php');
 
 setHeaderNoCache();
@@ -23,6 +14,5 @@ if ( isset($_POST['ok']) )
     $_SESSION['user']  = $newUser;
     header ('location: page_membre.php');
 }
-$newUser->form();
+echo $newUser->form();
 ?>
->>>>>>> 1fc3c01120bffe7747fe06c7f1ac7c5af9c4bf58
