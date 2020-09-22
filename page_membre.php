@@ -1,19 +1,24 @@
 <?php
+include ( 'L_fonctions_generales.php');
 
-session_start ();
+setHeaderNoCache();
+gestionSession();
 
-$user = $_SESSION['user'];
+$user_obj  = $_SESSION['user'];
+$users = $_SESSION['users'];
 
-echo '<html>';
-echo '<head>';
-echo '<title>Page de notre section membre</title>';
-echo '</head>';
-
-echo '<body>';
-echo "Votre login est $user ";
-echo '<br />';
+echo "Votre login est ".$user_obj->pseudo."<br>\n";
 
 // On affiche un lien pour fermer notre session
-echo '<a href="./logout.php">Déconnection</a>';
+echo '<a href="./logout.php">Déconnection</a><br>';
 	 	
+?>
+<?php
+
+foreach ($users as $user_obj ) 
+{
+	echo $user_obj->affiche();	
+}
+
+
 ?>
