@@ -1,6 +1,20 @@
 <?php
-$__TEST = false;
+include ( 'L_fonctions_generales.php');
 
-include ("L_fonctions_generales.php");
+setHeaderNoCache();
+gestionSession();
 
-form_inscrip( "login.php" );
+
+$newUser = new User();
+
+if ( isset($_POST['ok']) )
+{
+    $newUser->parsePost();
+    if ( $newUser->checkPwd() )
+    {    
+        $_SESSION['user']  = $newUser;
+        header ('location: page_membre.php');
+    }
+}
+echo $newUser->formLogin();
+?>
