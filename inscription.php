@@ -1,24 +1,27 @@
 <?php
 session_start();
-$users = $_SESSION['users'];
+
 
 if (isset($_POST['login']) && isset($_POST['pwd'])) 
 {
-
+    // on la démarre :)
+    
     $login = $_POST['login'];
     $pwd   = $_POST['pwd'];
 
-    foreach( $users as $log => $pw )
-        if ( $log == $login && $pw == $pwd )
-        {
-            $_SESSION['user'] = $login;
-            header ('location: page_membre.php');
-        }
+    $users[ $login ] = $pwd;
 
-    //echo '<body onLoad="alert(\'Membre non reconnu...\')">';
-    // puis on le redirige vers la page d'accueil
-    //echo '<meta http-equiv="refresh" content="0;URL=index.htm">';
+    $_SESSION['users'] = $users;
+
+    $_SESSION['user'] = $login;
+    
+    header ('location: page_membre.php');
 }
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>    
@@ -28,12 +31,17 @@ if (isset($_POST['login']) && isset($_POST['pwd']))
     <link rel="stylesheet" type="text/css" href="Formulaire.css">    
 </head>    
 <body>    
-    <h2>Login Page</h2><br>    
+    <h2>inscription</h2><br>    
     <div class="login">    
-    <form id="login" method="POST" action="login.php">        
+    <form id="login" method="POST" action="inscription.php">    
+        <label><b>User Name     
+        </b>    
         </label>    
-        <input type="text" name="login" id="log" placeholder="login">    
+        <input type="text" name="login" id="Uname" placeholder="Username">    
         <br><br>    
+        <label><b>Password     
+        </b>    
+        </label>    
         <input type="Password" name="pwd" id="Pass" placeholder="Password">    
         <br><br>    
         <input type="submit" name="log" id="log" value="Log In Here">       
@@ -45,4 +53,4 @@ if (isset($_POST['login']) && isset($_POST['pwd']))
     </form>     
 </div>    
 </body>    
-</html>  
+</html> 
