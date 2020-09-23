@@ -14,5 +14,5 @@ if ( isset($_POST['ok']) )
     $_SESSION['user']  = $newUser;
     header ('location: page_membre.php');
 }
-$newUser->form();
+echo $newUser->form();
 ?>
