@@ -52,7 +52,7 @@ class Designer extends Personne
 	$p2 = new Personne( "durand", "luc");
 	$b1 = new Boulanger( "Farineux", "Henri");
 	$m1 = new Mecanicien( "lotto", "philippe");
-	$d1  = new Designer ("Ro", "Aida");
+	$d1 = new Designer ("Ro", "Aida");
 
 	/*
 	$p1->show(); 
