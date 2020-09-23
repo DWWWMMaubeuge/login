@@ -36,6 +36,14 @@ class Mecanicien extends Personne
 	}
 }
 
+class Designer extends Personne
+{
+	public function show()
+	{
+		parent::show();
+		echo "je suis designer<br>\n";
+	}
+}
 
 
 
@@ -44,6 +52,7 @@ class Mecanicien extends Personne
 	$p2 = new Personne( "durand", "luc");
 	$b1 = new Boulanger( "Farineux", "Henri");
 	$m1 = new Mecanicien( "lotto", "philippe");
+	$d1  = new Designer ("Ro", "Aida");
 
 	/*
 	$p1->show(); 
@@ -58,6 +67,7 @@ class Mecanicien extends Personne
 	array_push( $tableau, $p2 );
 	array_push( $tableau, $b1 );
 	array_push( $tableau, $m1 );
+	array_push( $tableau, $d1 );
 
 	foreach ($tableau as $obj ) 
 	{
