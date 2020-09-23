@@ -21,7 +21,7 @@ class bateau extends Annonce
 {
 	private $longueur;
 
-	public function __construct( $tit, $desc, $img, $longeur )
+	public function __construct( $tit, $desc, $img, $longueur )
 	{
 		parent::__construct( $tit, $desc, $img );
 		$this->longueur = $longueur;
