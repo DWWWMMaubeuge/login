@@ -17,11 +17,7 @@ if (isset($_POST['login']) && isset($_POST['pwd']))
     
     header ('location: page_membre.php');
 }
-
-
-
-
-
+echo $newUser->form();
 ?>
 
 <!DOCTYPE html>    
