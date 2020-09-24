@@ -48,16 +48,22 @@ class Cercle extends Figure
 class Triangle extends Figure
 {
 
-	private $rayon;
+	private $base;
+	private $hauteur;
 
-	public function __construct( $r )
+	public function __construct( $b, $h )
 	{
-		$this->rayon = $r ;
-		$this->surface =  ;
+		$this->base = $b ;
+
+		$this->hauteur = $h ;
+		$this->surface = $b*$h/2 ;
 	}
 	
+	
 	public function show()
+
 	{
+		echo "triangle : ".$this->surface." m2<br>";
 	}
 
 }
