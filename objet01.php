@@ -19,6 +19,7 @@ class Point
 }
 
 
+
 	$p1 = new Point(3, 8);
 
 	$p1->show(); 
