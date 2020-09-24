@@ -43,23 +43,6 @@ class Triangle extends Figure
 	private $base;
 	private $hauteur;
 
-<<<<<<< HEAD
-	public function __construct( $b, $h )
-	{
-		$this->base = $b ;
-
-		$this->hauteur = $h ;
-		$this->surface = $b*$h/2 ;
-	}
-	
-	
-	public function show()
-
-	{
-		echo "triangle : ".$this->surface." m2<br>";
-	}
-
-=======
 	public function __construct( $h, $b )
 	{
 		$this->base = $b;
@@ -67,7 +50,6 @@ class Triangle extends Figure
 		$this->surface = $b * $h / 2;
 		$this->type_figure = "triangle";
 	}
->>>>>>> tuto
 }
 
 
